@@ -1,0 +1,25 @@
+# Beschreibende Agentenkonfiguration – KEINE Quelle für Sicherheitslimits.
+agent:
+  id: agent-c
+  name: autonomous-long-term-investor
+  scenario: long_term
+  variant: adaptive
+  learning_enabled: true
+
+strategy:
+  selection: autonomous
+  instruments:
+    - stocks
+    - etfs
+  horizons:
+    - long_term
+
+evaluation:
+  reward_enabled: true
+  reward_interval: daily
+  learning_interval: monthly
+
+portfolio:
+  starting_capital_eur: 10000
+  currency: EUR
+  execution_mode: paper

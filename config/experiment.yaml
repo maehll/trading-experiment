@@ -1,0 +1,14 @@
+# Versuchsparameter (werden versioniert in experiment_configs gespiegelt).
+experiment:
+  name: autonomous-trading-v1
+  base_currency: EUR
+  starting_capital_eur: 10000
+  execution_mode: paper
+  portfolios:
+    - agent-a            # frei
+    - agent-a-frozen     # eingefrorene Kontrollvariante
+    - agent-b            # intraday
+    - agent-b-frozen
+    - agent-c            # langfristig
+    - agent-c-frozen
+    - benchmark-d        # passiver Welt-ETF-Benchmark

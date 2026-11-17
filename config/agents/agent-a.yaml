@@ -1,0 +1,28 @@
+# Beschreibende Agentenkonfiguration – KEINE Quelle für Sicherheitslimits.
+agent:
+  id: agent-a
+  name: autonomous-free-trader
+  scenario: free
+  variant: adaptive
+  learning_enabled: true
+
+strategy:
+  selection: autonomous
+  instruments:
+    - stocks
+    - etfs
+    - approved_leveraged_products
+  horizons:
+    - intraday
+    - swing
+    - long_term
+
+evaluation:
+  reward_enabled: true
+  reward_interval: daily
+  learning_interval: weekly
+
+portfolio:
+  starting_capital_eur: 10000
+  currency: EUR
+  execution_mode: paper

@@ -1,0 +1,11 @@
+# v2: 100 * Nettorendite - 0.5 * maximaler Perioden-Drawdown - 0.05 * Umsatz
+# Renditen als Dezimalwerte, Drawdown und Umsatz in Prozentpunkten.
+# v1 bleibt über version: "v1" reproduzierbar.
+reward:
+  version: "v2"
+  lambda_benchmark: 1.0    # v1: Gewichtung der Benchmark-Abweichung
+  lambda_drawdown: 0.5     # v1: Strafgewicht Drawdown-Zunahme (pro Prozentpunkt)
+  lambda_turnover: 0.05    # v1: Strafgewicht Portfolioumschlag (pro Prozentpunkt)
+  # EURUSD wird als USD je EUR interpretiert; nötig, sobald Modellkosten vorliegen.
+  usd_eur_symbol: EURUSD
+  usd_eur_max_age_seconds: 259200
